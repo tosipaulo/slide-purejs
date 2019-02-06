@@ -1,0 +1,54 @@
+@mixin box-shadow($top:0px, $left:2px, $blur:6px, $color:#000000, $inset:"") {
+    box-shadow:$top $left $blur rgba($color, .5);
+}
+
+@mixin scrollbar {
+    &::-webkit-scrollbar-track {
+        background-color: $gray;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+        background: $gray;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $cor-template;
+    }
+}
+
+@mixin media-tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin media-1024 {
+    @media (min-width: #{$_1024}) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media (min-width: #{$widescreen}) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media (min-width: #{$fullhd}) { 
+        @content;
+    }
+}
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
