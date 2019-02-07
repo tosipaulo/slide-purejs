@@ -1,2 +1,17 @@
 @import '_base/index';
 @import '_utilities/index';
+
+.slide-wraper {
+    overflow: hidden;
+}
+
+.slide {
+    display: flex;
+
+    &__item {
+        flex-shrink: 0;
+        width: 80vw;
+        max-width: 800px;
+        margin: 0 20px;
+    }
+}

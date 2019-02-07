@@ -1,3 +1,7 @@
 import '../scss/index.scss';
+import Slide from './slide';
 
-console.log("outroteste") 
+const slide = new Slide('.slide', '.slide-wraper');
+slide.init();
+
+console.log(slide) 
